@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let message of messageList">
+    <ion-item>
+      <ion-label>
+        <h2>{{message.message}}</h2>
+        <p>{{message.username}} - {{message.date}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-input placeholder="Message"></ion-input> 
+  <ion-button (click)="sendMessage()">Envoyer</ion-button>
+
+</ion-content>
