@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WebsocketService } from '../websocket.service';
 
 @Component({
   selector: 'app-room',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomPage implements OnInit {
 
-  constructor() { }
+  constructor(private websocketService: WebsocketService) {}
+
+  roomId:string
 
   ngOnInit() {
+  }
+
+
+  createRoom(){
+    this.websocketService.createRoom(this.roomId)
+  }
+
+  joinRoom(){
+    this.websocketService.joinRoom(this.roomId)
+  }
+
+  leaveRoom(){
+    this.websocketService.leaveRoom()
   }
 
 }

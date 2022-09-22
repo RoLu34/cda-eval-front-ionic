@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../interface/client';
+import { WebsocketService } from '../websocket.service';
 
 @Component({
   selector: 'app-client-list',
@@ -8,24 +9,9 @@ import { Client } from '../interface/client';
 })
 export class ClientListPage implements OnInit {
 
-  constructor() { }
+  constructor(private websocketService: WebsocketService) { }
 
   ngOnInit() {
   }
-
-  clientList: Client[] = [
-    {
-      id: "212sdsdsd",
-      username: "Lucas"
-    },
-    {
-      id: "eokscd7545",
-      username: "coucou"
-    },
-    {
-      id: "1df21fd5",
-      username: "Rodriguez"
-    }
-  ];
 
 }

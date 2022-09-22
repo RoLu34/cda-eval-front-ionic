@@ -6,12 +6,16 @@
 
 <ion-content>
 
+  <p>id: {{websocketService.client.clientId}}</p>
+  <p>username: {{websocketService.client.username}}</p>
+  <p>roomId: {{websocketService.client.roomId}}</p>
 
   <ion-item>
     <ion-label position="floating">Room id</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="roomId"></ion-input>
   </ion-item>
-  
-  <ion-button>Valider</ion-button>
+  <ion-button expand="full" (click)="createRoom()">Create Room</ion-button>
+  <ion-button expand="full" (click)="joinRoom()">Join room</ion-button>
+  <ion-button expand="full" (click)="leaveRoom()">Leave room</ion-button>
 
 </ion-content>

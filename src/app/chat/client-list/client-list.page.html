@@ -6,9 +6,9 @@
 
 <ion-content>
 
-  <ion-list *ngFor="let client of clientList; let i = index">
+  <ion-list *ngFor="let client of websocketService.client.clientList">
     <ion-item>
-      <ion-label><b>{{client.username}}</b> - {{client.id}}</ion-label>
+      <ion-label><b>{{client.username}}</b> - {{client.client_id}}</ion-label>
     </ion-item>
   </ion-list>
 
